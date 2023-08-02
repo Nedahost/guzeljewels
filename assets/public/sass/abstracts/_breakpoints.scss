@@ -1,0 +1,57 @@
+//breakpoints
+
+$bp-xsm: 320;
+$bp-sm:430;
+
+$bp-smedium: 480;
+$bp-medium:605;
+
+
+$bp-xslarge:720;
+$bp-slarge: 805;
+
+$bp-large:959;
+
+$bp-xlarge: 1280;
+
+
+/********************
+** Media Queries
+********************/
+
+$mq-xsm: 'only screen and (min-device-width: #{$bp-xsm}px)';
+$mq-sm: 'only screen and (min-device-width: #{$bp-sm}px)';
+$mq-smedium: 'only screen and (min-width: #{$bp-smedium}px)';
+$mq-medium: 'only screen and (min-width: #{$bp-medium}px)';
+
+$mq-xslarge: 'only screen and (min-width: #{$bp-xslarge}px)';
+$mq-slarge: 'only screen and (min-width: #{$bp-slarge}px)';
+
+$mq-large: 'only screen and (min-width: #{$bp-large}px)';
+$mq-xlarge: 'only screen and (min-width: #{$bp-xlarge}px)';
+
+
+
+@media(min-width: 64em){
+    //style go here
+
+}
+
+//640px , 1024px , 1400px
+$breakpoints-up: ("medium":"40em" , "large": "64em" , "xlarge" :"87.5em");
+
+//639px , 1023px , 1399px
+$breakpoints-down: ("small": "39.9375em" , "medium":"63.9375em" , "large": "87.4375em");
+
+@mixin breakpoint-up($size){
+    @media (min-width: map-get($breakpoints-up , $size )){
+        @content;
+    }
+}
+
+
+@mixin breakpoint-down($size){
+    @media (max-width: map-get($breakpoints-down , $size )){
+        @content;
+    }
+}

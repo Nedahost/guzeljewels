@@ -1,0 +1,77 @@
+header{
+    border-top: 15px solid var(--clr-roz);
+    
+    .shopdetails{
+        padding-top: 14px;
+    }
+    
+    #logo{
+        text-align: center;
+    }
+    
+    nav{
+        padding-top: 25px;
+    }
+    
+    .shopdetails{
+        text-align: right;
+        padding-bottom: 10px;
+        ul{
+            li{
+                display: inline-flex;
+                padding: 0 10px;
+                font-size: 14px; 
+                font-weight: 300;
+                a{
+                    color: var(--clr-primary);
+                    &:hover{
+                        color: var(--clr-primary-hover);
+                    }
+                }
+
+            }
+
+            .headeraccount{
+                a{
+                    &:before{
+                        font-family: "FontAwesome";
+                        content: "\f007";
+                    }
+                    
+                    span{
+                        @include bp (mobilePortrait){
+                            @include bp-max(sm){
+                        display: none;
+                            }
+                        }
+                    }
+                }
+            }
+            .headerlogout{
+                a{
+                    &:before{
+                font-family: "FontAwesome";
+                content: "\f08b";
+                    }
+                    
+                    span{
+                        @include bp (mobilePortrait){
+                            @include bp-max(sm){
+                        display: none;
+                            }
+                        }
+                    }
+                }
+            }
+            .headercart{
+                a{
+                    &:before{
+                        font-family: "FontAwesome";
+                        content: "\f291";
+                    }
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,167 @@
+.experiencestitle{
+    font-size: var(--fs-xl);
+    text-align: center;
+    position: relative;
+    @include bp(large) {
+        top: 23px;
+    }
+    @include bp (mobilePortrait){
+        @include bp-max(sm){
+            top: 10px;
+        }
+    }
+}
+#outerexperiences{
+    background-color: var(--clr-roz-opacity);
+    width:100%;
+    @include bp(large) {
+        padding: 68px 0 60px;
+    }
+    @include bp (mobilePortrait){
+        @include bp-max(sm){
+           padding: 40px;
+        }
+    }
+    border-bottom: 1px solid var(--clr-primary);
+    ul{
+        display: flex;
+        @include bp (mobilePortrait){
+            @include bp-max(sm){
+                flex-direction: column;
+                align-items: center;
+                flex-wrap: nowrap;
+                justify-content: center;
+            }
+        }
+        li{
+            text-align:center;
+            content: '';
+            padding: 10px 0;
+            line-height: 24px;
+            @include bp(large) {
+                width: 33.3%;
+                border-left: 1px solid var(--clr-primary);
+            }
+            h4{
+                font-size: 20px;
+                font-weight: bold;
+            }
+            span{
+                font-size: 13px;
+                font-weight: 300;
+            }
+            &:first-child{
+                border-left: none;
+            }
+        }
+    }
+}
+
+
+footer{
+    padding: 55px 0 35px;
+    .footer_details{
+        display: flex;
+        @include bp (mobilePortrait){
+            @include bp-max(sm){
+                flex-direction: column;
+                align-items: stretch;
+                flex-wrap: nowrap;
+                justify-content: center;
+                gap: 25px;
+            }
+        }
+        section{
+            color: var(--clr-primary);
+            @include bp(large) {
+                width: 25%;
+            }
+            .widget_nav_menu{
+                h3{
+                    color: var(--clr-primary);
+                    font-size: 13px;
+                    font-weight: bold;
+                }
+                div{
+                    margin-top:15px;
+                    ul{
+                        li{
+                            line-height: 24px;
+                            font-size: 13px;
+                            font-weight: 300;
+                            a{
+                                color: var(--clr-primary);
+                                &:hover{
+                                    color: var(--clr-primary-hover);   
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .widget_text{
+                h3{
+                    color: #233F71;
+                    letter-spacing: 4px;
+                }
+                p{
+                    margin: 15px 0 0;
+                    padding: 0px;
+                    line-height: 24px;
+                }
+                a{
+                    color: #808080;
+                }
+            }
+            .widget_mc4wp_form_widget{
+                h3{
+                    color: #233F71;
+                    letter-spacing: 4px;
+                }
+            }
+            .svgicons{
+                position: relative;
+                top:17px;
+                svg{
+                    width: 15%;
+                }
+            }
+
+        }
+    }
+
+    .bankimages{
+        text-align: center;
+        padding-top: 30px;
+        img{
+            width: 100%;
+            max-width: 600px;
+        }
+    }
+}
+
+
+.newsletter_footer{
+    border: transparent;
+    background-color: transparent;
+    border-bottom: 1px solid #000;
+    padding-left: 7px;
+    color: #808080;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    outline: none;
+    margin-top: 15px;
+    width: 100%;
+    padding-bottom: 5px;
+    font-style: italic;
+}
+
+
+.powerby{
+    background-color: var(--clr-primary);
+    color: var(--clr-background);
+    text-align: center;
+    font-size: 13px;
+    padding: 10px 0;
+}

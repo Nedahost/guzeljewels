@@ -1,0 +1,15 @@
+{
+  "name": "ffordesign",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "node-sass --include-path assets/public/sass/mystyle.scss   assets/public/css/mystyle.css --style compact"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.49.9"
+  }
+}

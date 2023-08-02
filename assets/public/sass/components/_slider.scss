@@ -1,0 +1,57 @@
+.outerslider{
+    margin: 35px 0;
+    .sliderimages{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        gap: 22px;
+        figure{
+            margin: 0px;
+            padding:0px;
+            width: 50%;
+            img{
+                background-color: var(--clr-roz);
+                width: 100%;
+            }
+        }
+    }
+    .slidercontent{
+        text-align: center;
+        position: relative;
+         @include bp(large) {
+            top: -42px;
+         }
+        
+        h2{
+            font-size: var(--fs-xxl);
+            margin: 0px;
+            padding: 0px;
+        }
+        p{
+            margin: 0px;
+            padding: 0px;
+            font-size: 18px;
+            font-weight: 300;
+        }
+    }
+    
+    .topbuttons{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        @include bp(large) {
+            gap: 22px;
+        }
+        @include bp (mobilePortrait){
+            @include bp-max(sm){
+                margin-top: 20px;
+               gap: 10px;
+            }
+        }
+        
+        .buttons{
+            flex: 0 17%;
+        }
+    }
+}

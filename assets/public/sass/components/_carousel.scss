@@ -1,0 +1,56 @@
+.carouseltitle{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    top: 17px;
+}
+
+.outercarousel{
+    background-color: var(--clr-roz-opacity);
+    padding: 90px 0;
+    .carousel{
+        ul{
+            margin: 0px;
+            padding: 0px;
+            display: flex;
+            gap: 30px;
+            text-align: center;
+            @include bp (mobilePortrait){
+            @include bp-max(sm){
+                flex-direction: column;
+                align-items: center;
+                flex-wrap: nowrap;
+                justify-content: center;
+                }
+            }
+            
+            li{
+                 @include bp(large) {
+                    width: 25%;
+                 }
+                figure{
+                    margin: 0px;
+                    padding: 0px;
+                    img{
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+                h3{
+                    margin: 0px;
+                    padding: 25px 0 14px; 
+                    font-size: 1rem;
+                    font-weight: 300;
+                    a{
+                        color: var(--clr-primary);
+                    }
+                }
+                .homeprice{
+                    font-size: 1rem;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+}
